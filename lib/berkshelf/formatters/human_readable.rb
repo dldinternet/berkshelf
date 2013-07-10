@@ -5,6 +5,11 @@ module Berkshelf
 
       register_formatter :human
 
+      # Output the version of Berkshelf
+      def version
+        Berkshelf.ui.info Berkshelf::VERSION
+      end
+
       # Output a Cookbook installation message using {Berkshelf.ui}
       #
       # @param [String] cookbook
